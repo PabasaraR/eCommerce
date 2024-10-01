@@ -5,6 +5,7 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import AddressChangeModal from "../components/AddressChangeModal";
 import { Link } from "react-router-dom";
+import emtyCart from "../assets/Images/emptycart.png";
 
 export default function Cart() {
   const diapatch = useDispatch();
@@ -89,7 +90,9 @@ export default function Cart() {
           )}
         </div>
       ) : (
-        <div>none</div>
+        <div className="flex justify-center">
+          <img src={emtyCart} />
+        </div>
       )}
     </>
   );

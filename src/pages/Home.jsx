@@ -6,7 +6,6 @@ import InfoSection from "../components/InfoSection";
 import { useEffect } from "react";
 import { selectAllProduct, setProduct } from "../redux/productSlice";
 import ProductCart from "../components/ProductCart";
-import Footer from "../components/Footer";
 
 export default function Home() {
   //const products = useSelector((Store) => Store.product);
@@ -21,8 +20,8 @@ export default function Home() {
 
   console.log(allProduct);
   return (
-    <div className="flex flex-col mt-6 gap-10  w-[100%] h-[100vh] ">
-      <div className="flex flex-col gap-4 mx-20 md:flex-row h-[60%]">
+    <div className="flex flex-col mt-6 gap-10  w-[100%]  relative pb-5">
+      <div className="flex flex-col gap-4 mx-20 md:flex-row ">
         <div className="md:w-[20%] w-[100%]">
           <div className="flex flex-col  bg-[#fcf6f5] drop-shadow-md  rounded-[10px] h-[100%]  flex-grow">
             <div className="bg-[#990011] text-[#fcf6f5] font-bold p-2 rounded-t-[10px]">
@@ -45,11 +44,15 @@ export default function Home() {
           <img
             src={hp}
             alt="home page image"
-            className=" h-[100%] w-[100%] rounded-[10px]"
+            className="  w-[100%] rounded-[10px]"
           />
           <div className="text-[#fcf6f5] absolute top-14 left-16 ">
-            <div className="font-bold">WELCOME TO UNITY_MART</div>
-            <div className="text-[0.7rem]">MILLIONS + PRODUCT</div>
+            <div className="font-bold md:text-[2rem] text-[1rem]">
+              WELCOME TO UNITY_MART
+            </div>
+            <div className="text-[0.7rem] md:text-[1.3rem]">
+              MILLIONS + PRODUCT
+            </div>
             <button className="bg-[#fcf6f5] text-[#990011] rounded-[20px] px-3 font-semibold mt-4 hover:scale-110 duration-500">
               SHOP NOW
             </button>
@@ -80,10 +83,6 @@ export default function Home() {
             );
           })}
         </div>
-      </div>
-
-      <div>
-        <Footer />
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { useState } from "react";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import SearchProduct from "./pages/SearchProduct";
 import ProductDetail from "./pages/ProductDetail";
+import Footer from "./components/Footer";
 
 function App() {
   const [orderConfirmData, setOrderConfirmData] = useState({});
@@ -33,6 +34,7 @@ function App() {
           element={<OrderConfirmation orderData={orderConfirmData} />}
         />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
